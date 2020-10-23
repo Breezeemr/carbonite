@@ -7,11 +7,12 @@ import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
 import com.esotericsoftware.kryo.serializers.DefaultSerializers;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 
 /** User: sritchie Date: 1/20/12 Time: 3:49 PM */
-public class RatioSerializer extends Serializer<Ratio> {
-  final DefaultSerializers.BigIntegerSerializer big  = new DefaultSerializers.BigIntegerSerializer();
+public class RatioSerializer extends Serializer<Ratio> implements Serializable  {
+  final transient DefaultSerializers.BigIntegerSerializer big  = new DefaultSerializers.BigIntegerSerializer();
 
 
   public void write(Kryo k, Output output, Ratio ratio) {

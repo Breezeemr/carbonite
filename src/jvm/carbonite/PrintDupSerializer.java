@@ -7,10 +7,12 @@ import com.esotericsoftware.kryo.Serializer;
 import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
 
+import java.io.Serializable;
+
 /** User: sritchie Date: 1/21/12 Time: 7:57 PM */
-public class PrintDupSerializer extends Serializer {
-  final Var cljRead;
-  final Var cljPrintDup;
+public class PrintDupSerializer extends Serializer implements Serializable {
+  final transient Var cljRead;
+  final transient Var cljPrintDup;
 
   public PrintDupSerializer() {
     JavaBridge.requireCarbonite();

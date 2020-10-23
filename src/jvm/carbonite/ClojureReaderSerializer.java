@@ -7,6 +7,8 @@ import com.esotericsoftware.kryo.Serializer;
 import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
 
+import java.io.Serializable;
+
 /** User: sritchie Date: 1/20/12 Time: 3:57 PM
  *
  * Define a serializer that utilizes the Clojure pr-str and
@@ -15,9 +17,9 @@ import com.esotericsoftware.kryo.io.Output;
  * likely to work in many cases.
  *
  */
-public class ClojureReaderSerializer extends Serializer {
-  final Var cljRead;
-  final Var cljPrint;
+public class ClojureReaderSerializer extends Serializer implements Serializable{
+  final transient Var cljRead;
+  final transient Var cljPrint;
 
   public ClojureReaderSerializer() {
     JavaBridge.requireCarbonite();

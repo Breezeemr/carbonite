@@ -9,9 +9,11 @@ import com.esotericsoftware.kryo.Serializer;
 import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
 
-public class ClojureMapSerializer extends Serializer {
-  final Var writeMap;
-  final Var readMap;
+import java.io.Serializable;
+
+public class ClojureMapSerializer extends Serializer implements Serializable {
+  final transient Var writeMap;
+  final transient Var readMap;
 
   public ClojureMapSerializer() {
     JavaBridge.requireCarbonite();

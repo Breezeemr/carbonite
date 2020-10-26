@@ -12,8 +12,8 @@ import com.esotericsoftware.kryo.io.Output;
 import java.io.Serializable;
 
 public class ClojureMapSerializer extends Serializer implements Serializable {
-  final transient Var writeMap;
-  final transient Var readMap;
+  final Var writeMap;
+  final Var readMap;
 
   public ClojureMapSerializer() {
     JavaBridge.requireCarbonite();

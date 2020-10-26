@@ -11,8 +11,8 @@ import java.io.Serializable;
 
 /** User: sritchie Date: 1/21/12 Time: 7:57 PM */
 public class PrintDupSerializer extends Serializer implements Serializable {
-  final transient Var cljRead;
-  final transient Var cljPrintDup;
+  final Var cljRead;
+  final Var cljPrintDup;
 
   public PrintDupSerializer() {
     JavaBridge.requireCarbonite();

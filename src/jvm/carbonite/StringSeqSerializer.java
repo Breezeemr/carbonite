@@ -11,8 +11,8 @@ import java.io.Serializable;
 
 /** User: sritchie Date: 1/21/12 Time: 8:19 PM */
 public class StringSeqSerializer extends Serializer implements Serializable {
-  final transient Var readStringSeq;
-  final transient Var printStringSeq;
+  final Var readStringSeq;
+  final Var printStringSeq;
 
   public StringSeqSerializer() {
     JavaBridge.requireCarbonite();

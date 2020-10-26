@@ -18,8 +18,8 @@ import java.io.Serializable;
  *
  */
 public class ClojureReaderSerializer extends Serializer implements Serializable{
-  final transient Var cljRead;
-  final transient Var cljPrint;
+  final Var cljRead;
+  final Var cljPrint;
 
   public ClojureReaderSerializer() {
     JavaBridge.requireCarbonite();

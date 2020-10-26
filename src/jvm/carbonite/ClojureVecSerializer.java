@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 /** User: sritchie Date: 1/21/12 Time: 8:13 PM */
 public class ClojureVecSerializer extends ClojureCollSerializer implements Serializable {
-  final transient Var readVec;
+  final Var readVec;
 
   public ClojureVecSerializer() {
     readVec = RT.var("carbonite.serializer", "read-vector");

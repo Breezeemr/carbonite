@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 /** User: sritchie Date: 1/21/12 Time: 8:09 PM */
 public class ClojureSeqSerializer extends ClojureCollSerializer implements Serializable {
-  final transient Var readSeq;
+  final Var readSeq;
 
   public ClojureSeqSerializer() {
     readSeq = RT.var("carbonite.serializer", "read-seq");

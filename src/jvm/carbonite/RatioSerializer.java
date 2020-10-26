@@ -12,7 +12,7 @@ import java.math.BigInteger;
 
 /** User: sritchie Date: 1/20/12 Time: 3:49 PM */
 public class RatioSerializer extends Serializer<Ratio> implements Serializable  {
-  final transient DefaultSerializers.BigIntegerSerializer big  = new DefaultSerializers.BigIntegerSerializer();
+  final DefaultSerializers.BigIntegerSerializer big  = new DefaultSerializers.BigIntegerSerializer();
 
 
   public void write(Kryo k, Output output, Ratio ratio) {
